@@ -1,0 +1,103 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Егор\AppData\Local\Temp\idea9.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Егор\AppData\Local\Temp\idea9.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.6 (AdoptOpenJDK Java 11.0.10)
+[debug]       Load.loadUnit: plugins took 205.4764ms
+[debug]       Load.loadUnit: defsScala took 0.4704ms
+[debug] [Loading] Scanning directory C:\Users\Егор\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Егор\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 35.5725 ms
+[debug]           Load.resolveProject(global-plugins) took 81.5915ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Егор\.sbt\1.0\plugins, plugins: List(<none>))) took 168.5902ms
+[debug] [Loading] Done in C:\Users\Егор\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 206.7723ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.4153ms
+[debug]     Load.loadUnit(file:/C:/Users/Егор/.sbt/1.0/plugins/, ...) took 434.8425ms
+[debug]   Load.apply: load took 778.0543ms
+[debug]   Load.apply: resolveProjects took 11.223ms
+[debug]   Load.apply: finalTransforms took 134.1726ms
+[debug]   Load.apply: config.delegates took 12.5744ms
+[debug]   Load.apply: Def.make(settings)... took 1281.7463ms
+[debug]   Load.apply: structureIndex took 148.5017ms
+[debug]   Load.apply: mkStreams took 2.501ms
+[info] loading global plugins from C:\Users\Егор\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 4958.4191ms
+[debug]           Load.loadUnit: plugins took 46.2483ms
+[debug]           Load.loadUnit: defsScala took 0.0063ms
+[debug] [Loading] Scanning directory C:\ScalaBootCamp\Homework\ClearProject\SecondHomework\project
+[debug]             Load.loadUnit: mkEval took 11.6852ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\ScalaBootCamp\Homework\ClearProject\SecondHomework\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.4185 ms
+[info] loading settings for project secondhomework-build from idea9.sbt ...
+[debug]               Load.resolveProject(secondhomework-build) took 5.311ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id secondhomework-build, base: C:\ScalaBootCamp\Homework\ClearProject\SecondHomework\project, plugins: List(<none>))) took 8.5812ms
+[debug] [Loading] Done in C:\ScalaBootCamp\Homework\ClearProject\SecondHomework\project, returning: (secondhomework-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 3473.1607ms
+[debug]           Load.loadUnit: cleanEvalClasses took 11.5355ms
+[debug]         Load.loadUnit(file:/C:/ScalaBootCamp/Homework/ClearProject/SecondHomework/project/, ...) took 3532.695ms
+[debug]       Load.apply: load took 3537.2702ms
+[debug]       Load.apply: resolveProjects took 0.1586ms
+[debug]       Load.apply: finalTransforms took 36.0677ms
+[debug]       Load.apply: config.delegates took 0.6832ms
+[debug]       Load.apply: Def.make(settings)... took 309.519ms
+[debug]       Load.apply: structureIndex took 39.1011ms
+[debug]       Load.apply: mkStreams took 0.0042ms
+[info] loading project definition from C:\ScalaBootCamp\Homework\ClearProject\SecondHomework\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 5881.9107ms
+[debug]     Load.loadUnit: defsScala took 0.0046ms
+[debug] [Loading] Scanning directory C:\ScalaBootCamp\Homework\ClearProject\SecondHomework
+[debug]       Load.loadUnit: mkEval took 0.3891ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\ScalaBootCamp\Homework\ClearProject\SecondHomework, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))), Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 2.9337 ms
+[info] loading settings for project secondhomework from build.sbt ...
+[debug]         Load.resolveProject(secondhomework) took 55.9777ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id secondhomework, base: C:\ScalaBootCamp\Homework\ClearProject\SecondHomework, plugins: List(<none>))) took 60.788ms
+[debug] [Loading] Done in C:\ScalaBootCamp\Homework\ClearProject\SecondHomework, returning: (secondhomework)
+[debug]     Load.loadUnit: loadedProjectsRaw took 2455.0887ms
+[debug]     Load.loadUnit: cleanEvalClasses took 22.2158ms
+[debug]   Load.loadUnit(file:/C:/ScalaBootCamp/Homework/ClearProject/SecondHomework/, ...) took 8360.1186ms
+[debug] Load.apply: load took 8362.4839ms
+[debug] Load.apply: resolveProjects took 0.1379ms
+[debug] Load.apply: finalTransforms took 37.6522ms
+[debug] Load.apply: config.delegates took 0.4275ms
+[debug] Load.apply: Def.make(settings)... took 132.9742ms
+[debug] Load.apply: structureIndex took 45.9119ms
+[debug] Load.apply: mkStreams took 0.0026ms
+[info] set current project to SecondHomework (in build file:/C:/ScalaBootCamp/Homework/ClearProject/SecondHomework/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 54272 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 54272, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to SecondHomework (in build file:/C:/ScalaBootCamp/Homework/ClearProject/SecondHomework/)
+[debug] > Exec(idea-shell, None, None)
