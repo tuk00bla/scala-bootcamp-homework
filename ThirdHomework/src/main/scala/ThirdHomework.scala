@@ -98,3 +98,4 @@ object ThirdHomework {
   def main(args: Array[String]): Unit = Source.stdin.getLines() map process foreach println
 }
 
+
