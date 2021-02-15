@@ -1,5 +1,8 @@
 import FourthHomework._
 import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers._
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 class HomeworkTest extends AnyFunSuite {
   test("Correct sum of array"){
