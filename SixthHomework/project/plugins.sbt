@@ -1,0 +1,1 @@
+addSbtPlugin("com.example" % "BulkySourcePlugin" % "0.1")
