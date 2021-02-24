@@ -11,6 +11,8 @@ object ThirdHomework {
     val AVERAGE = "average"
     val MIN = "min"
     val MAX = "max"
+    val LOG = "log"
+    val EXP = "exp"
   }
 
   sealed trait Command
@@ -26,6 +28,10 @@ object ThirdHomework {
     final case class Min(numbers: List[Option[Double]]) extends Command
 
     final case class Max(numbers: List[Option[Double]]) extends Command
+
+    final case class Log(numbers: List[Option[Double]]) extends Command
+
+    final case class Exp(base: Option[Double], exponent: Option[Double]) extends Command
 
   }
 
@@ -56,11 +62,20 @@ object ThirdHomework {
       case (AVERAGE, list@_ :: _ :: _) => Right(Average(list))
       case (MIN, list@_ :: _ :: _) => Right(Min(list))
       case (MAX, list@_ :: _ :: _) => Right(Max(list))
+      case (LOG, list@_ :: _ :: _) => Right(Log(list))
+      case (EXP, base :: exponent :: _) => Right(Exp(base, exponent))
       case _ => Left(InvalidCommandError("Command not found"))
     }
   }
 
   def calculate(x: Command): Either[Error, RenderData] = {
+
+    def exponentiate(base : Double, exponent : Double) : Double =
+      if (exponent == 0)
+        1.0
+      else
+        base * exponentiate(base, exponent - 1)
+
     x match {
       case Divide(_, Some(0)) =>
         Left(DivisionByZeroError("Division by zero"))
@@ -74,6 +89,10 @@ object ThirdHomework {
         Right(RenderData(MIN, list, list.map(_.get).min))
       case Max(list) if list.forall(_.isDefined) =>
         Right(RenderData(MAX, list, list.map(_.get).max))
+      case Log(list) if list.forall(_.isDefined) =>
+        Right(RenderData(LOG, list, list.map(_.get).))
+      case Exp(Some(base), Some(exponent)) =>
+        Right(RenderData(EXP, List(Some(base), Some(exponent)), exponentiate(base, exponent)))
       case _ => Left(CalculationError("Can not perform calculation on provided input"))
     }
   }
@@ -81,6 +100,7 @@ object ThirdHomework {
   def renderResult(x: RenderData): String = {
     x.command match {
       case DIVIDE => s"${x.numbers.head} divided by ${x.numbers.tail.head} is ${x.calculatedValue}"
+      case EXP => s"${x.numbers.head} is by ${x.numbers.tail.head} is ${x.calculatedValue}"
       case _ => s"the ${x.command} of ${x.numbers.map(_.get).mkString(" ")} is ${x.calculatedValue}"
     }
   }
