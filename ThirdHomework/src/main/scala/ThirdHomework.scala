@@ -104,12 +104,12 @@ object ThirdHomework {
   }
 
   def renderError(error: ErrorMessage): String = {
-    val reason = error match {
+    val strError = error match {
       case ErrorMessage.InvalidCommandError => "Invalid command"
       case ErrorMessage.DivisionByZeroError => "Can't divide by zero"
       case ErrorMessage.CalculationError => "Calculation error"
     }
-    s"Error: $reason"
+    s"Error: $strError"
   }
 
   def process(enterLine: String): String = {
