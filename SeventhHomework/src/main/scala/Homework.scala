@@ -15,9 +15,9 @@ object Circe {
 
   @JsonCodec final case class TeamTotals(assists: String, fullTimeoutRemaining: String, plusMinus: String)
 
-  @JsonCodec final case class TeamBoxScore(totals: TeamTotals)
+  @JsonCodec final case class TeamBox(totals: TeamTotals)
 
-  object TeamBoxScore {
+  object TeamBox {
 
     import io.circe.generic.semiauto._
 
@@ -33,7 +33,7 @@ object Circe {
     implicit lazy val decoder: Decoder[TeamTotals] = decoderDerived or decoderCamelSnake
   }
 
-  @JsonCodec final case class GameStats(hTeam: TeamBoxScore, vTeam: TeamBoxScore)
+  @JsonCodec final case class GameStats(xTeam: TeamBox, yTeam: TeamBox)
 
   @JsonCodec final case class PrevMatchup(gameDate: LocalDate, gameId: String)
 
@@ -84,10 +84,10 @@ object Circe {
                                     gameDuration: GameDuration,
                                     gameId: String,
                                     gameUrlCode: String,
-                                    hTeam: TeamStats,
+                                    xTeam: TeamStats,
                                     isBuzzerBeater: Boolean,
                                     startTimeUTC: ZonedDateTime,
-                                    vTeam: TeamStats,
+                                    yTeam: TeamStats,
                                   )
 
   @JsonCodec final case class Scoreboard(games: List[Game], numGames: Int)
