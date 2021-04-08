@@ -8,7 +8,7 @@ object FourteenthHomework {
 
     def map[B](f: A => B): IO[B] = IO(f(run()))
 
-    def flatMap[B](f: A => IO[B]): IO[B] = IO(f(run()).run)
+    def flatMap[B](f: A => IO[B]): IO[B] = IO(f(run()).unsafeRunSync())
 
     def *>[B](another: IO[B]): IO[B] = flatMap(_ => another)
 
