@@ -17,6 +17,7 @@ import scala.concurrent.duration._
  * If we will put a value with the same key then it should renew expiration
  */
 object SeventeenthHomework extends IOApp {
+
   trait Cache[F[_], K, V] {
     def get(key: K): F[Option[V]]
 
@@ -44,6 +45,7 @@ object SeventeenthHomework extends IOApp {
   }
 
   object Cache {
+
     def of[F[_] : Clock, K, V](
                                 expiresIn: FiniteDuration,
                                 checkOnExpirationsEvery: FiniteDuration
@@ -59,7 +61,9 @@ object SeventeenthHomework extends IOApp {
         state <- Ref.of[F, Map[K, (Long, V)]](Map.empty)
         _ <- C.start(exp(state))
       } yield new RefCache[F, K, V](state, expiresIn)
+
     }
+
   }
 
   override def run(args: List[String]): IO[ExitCode] = {
